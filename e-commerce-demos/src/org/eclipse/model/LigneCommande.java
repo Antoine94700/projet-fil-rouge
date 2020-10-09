@@ -1,7 +1,7 @@
 package org.eclipse.model;
 
 public class LigneCommande {
-	private int id;
+	private int idLigneCommande;
 	private int quantiteCommandee;
 	private Produit produit;
 	private Commande commande;
@@ -9,19 +9,19 @@ public class LigneCommande {
 	public LigneCommande() {
 	}
 
-	public LigneCommande(int id, int quantiteCommandee, Produit produit, Commande commande) {
-		this.id = id;
+	public LigneCommande(int idLigneCommande, int quantiteCommandee, Produit produit, Commande commande) {
+		this.idLigneCommande = idLigneCommande;
 		this.quantiteCommandee = quantiteCommandee;
 		this.produit = produit;
 		this.commande = commande;
 	}
 
-	public int getId() {
-		return id;
+	public int getIdLigneCommande() {
+		return idLigneCommande;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdLigneCommade(int idLigneCommande) {
+		this.idLigneCommande = idLigneCommande;
 	}
 
 	public int getQuantiteCommandee() {
@@ -50,7 +50,7 @@ public class LigneCommande {
 
 	@Override
 	public String toString() {
-		return "LigneCommande [id=" + id + ", quantiteCommandee=" + quantiteCommandee + ", produit=" + produit
+		return "LigneCommande [idLigneCommande=" + idLigneCommande + ", quantiteCommandee=" + quantiteCommandee + ", produit=" + produit
 				+ ", commande=" + commande + "]";
 	}
 

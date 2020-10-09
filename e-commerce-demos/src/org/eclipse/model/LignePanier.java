@@ -1,7 +1,7 @@
 package org.eclipse.model;
 
 public class LignePanier {
-	private int id;
+	private int idLignePanier;
 	private int qteCommandee;
 	private Produit produit;
 	private Panier panier;
@@ -9,19 +9,19 @@ public class LignePanier {
 	public LignePanier() {
 	}
 
-	public LignePanier(int id, int qteCommandee, Produit produit, Panier panier) {
-		this.id = id;
+	public LignePanier(int idLignePanier, int qteCommandee, Produit produit, Panier panier) {
+		this.idLignePanier = idLignePanier;
 		this.qteCommandee = qteCommandee;
 		this.produit = produit;
 		this.panier = panier;
 	}
 
-	public int getId() {
-		return id;
+	public int getIdLignePanier() {
+		return idLignePanier;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdLignePanier(int idLignePanier) {
+		this.idLignePanier = idLignePanier;
 	}
 
 	public Produit getProduit() {
@@ -50,7 +50,7 @@ public class LignePanier {
 
 	@Override
 	public String toString() {
-		return "LignePanier [id=" + id + ", qteCommandee=" + qteCommandee + ", produit=" + produit + ", panier="
+		return "LignePanier [idLignePanier=" + idLignePanier + ", qteCommandee=" + qteCommandee + ", produit=" + produit + ", panier="
 				+ panier + "]";
 	}
 

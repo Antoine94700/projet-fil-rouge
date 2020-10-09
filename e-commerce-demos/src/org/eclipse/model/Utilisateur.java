@@ -1,38 +1,38 @@
 package org.eclipse.model;
 
 public class Utilisateur {
-	private int id;
-	private String login;
-	private String password;
+	private int idUtilisateur;
+	private String identifiant;
+	private String motDePasse;
 	private String nom;
 	private String prenom;
 	
 	public Utilisateur() {
 	}
-	public Utilisateur(int id, String login, String password, String nom, String prenom) {
-		this.id = id;
-		this.login = login;
-		this.password = password;
+	public Utilisateur(int idUtilisateur, String identifiant, String motDePasse, String nom, String prenom) {
+		this.idUtilisateur = idUtilisateur;
+		this.identifiant = identifiant;
+		this.motDePasse = motDePasse;
 		this.nom = nom;
 		this.prenom = prenom;
 	}
-	public int getId() {
-		return id;
+	public int getIdUtilisateur() {
+		return idUtilisateur;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setIdUtilisatuer(int idUtilisateur) {
+		this.idUtilisateur = idUtilisateur;
 	}
-	public String getLogin() {
-		return login;
+	public String getIdentifiant() {
+		return identifiant;
 	}
-	public void setLogin(String login) {
-		this.login = login;
+	public void setIdentifiant(String identifiant) {
+		this.identifiant = identifiant;
 	}
-	public String getPassword() {
-		return password;
+	public String getMotDePasse() {
+		return motDePasse;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setMotDePasse(String motDePasse) {
+		this.motDePasse = motDePasse;
 	}
 	public String getNom() {
 		return nom;
@@ -48,7 +48,7 @@ public class Utilisateur {
 	}
 	@Override
 	public String toString() {
-		return "Utilisateur [id=" + id + ", login=" + login + ", password=" + password + ", nom=" + nom + ", prenom="
+		return "Utilisateur [idUtilisateur=" + idUtilisateur + ", login=" + identifiant + ", identifiant=" + motDePasse + ", nom=" + nom + ", prenom="
 				+ prenom + "]";
 	}
 	

@@ -3,16 +3,16 @@ package org.eclipse.model;
 import java.util.Date;
 
 public class Commande {
-	private int id;
+	private int idCommande;
 	private Date dateCommande;
 	private Client client;
 
-	public int getId() {
-		return id;
+	public int getIdCommande() {
+		return idCommande;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdCommande(int idCommande) {
+		this.idCommande = idCommande;
 	}
 
 	public Date getDateCommande() {
@@ -33,7 +33,7 @@ public class Commande {
 
 	@Override
 	public String toString() {
-		return "Commande [id=" + id + ", dateCommande=" + dateCommande + ", client=" + client + "]";
+		return "Commande [idCommande=" + idCommande + ", dateCommande=" + dateCommande + ", client=" + client + "]";
 	}
 
 }

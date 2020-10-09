@@ -2,7 +2,6 @@ package org.eclipse.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.eclipse.model.Utilisateur;
 
@@ -20,14 +19,27 @@ public class UtilisateurService {
 	public void remove(Utilisateur utilisateur) {
 		utilisateurs.remove(utilisateur);
 	}
-	public Utilisateur findById(int id) {
-		return utilisateurs.stream().filter(elt -> elt.getId() == id).collect(Collectors.toList()).get(0);
+	
+	public Utilisateur findById(int idUtilisateur) {
+		for (Utilisateur utilisateur : utilisateurs) {
+			if (utilisateur.getIdUtilisateur() == idUtilisateur) {
+			return utilisateur;
+			}
+		}
+		return null;
 	}
-	public Utilisateur findByLoginAndPassword(String login, String password) {
-		return utilisateurs.stream()
-				.filter(elt -> elt.getLogin().equals(login) && elt.getPassword().equals(password))
-				.collect(Collectors.toList()).get(0);
+	
+	public Utilisateur findByUserNameAndPassword(String identifiant, String motDePasse) {
+		for (Utilisateur utilisateur : utilisateurs) {
+			if (utilisateur.getIdentifiant() .equals identifiant && utilisateur.getMotDePasse() .equals motDePasse) {
+				return utilisateur;
+			}
+		}
+		
 	}
+	
+	
+	
 	public List<Utilisateur> getUtilisateurs() {
 		return utilisateurs;
 	}

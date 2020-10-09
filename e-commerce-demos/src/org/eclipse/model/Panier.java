@@ -1,23 +1,23 @@
 package org.eclipse.model;
 
 public class Panier {
-	private int id;
+	private int idPanier;
 	private Client client;
 
 	public Panier() {
 	}
 
-	public Panier(int id, Client client) {
-		this.id = id;
+	public Panier(int idPanier, Client client) {
+		this.idPanier = idPanier;
 		this.client = client;
 	}
 
-	public int getId() {
-		return id;
+	public int getIdPanier() {
+		return idPanier;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdPanier(int id) {
+		this.idPanier = id;
 	}
 
 	public Client getClient() {
@@ -30,7 +30,7 @@ public class Panier {
 
 	@Override
 	public String toString() {
-		return "Panier [id=" + id + ", client=" + client + "]";
+		return "Panier [idPanier=" + idPanier + ", client=" + client + "]";
 	}
 
 }

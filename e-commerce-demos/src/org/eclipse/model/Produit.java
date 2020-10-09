@@ -1,7 +1,7 @@
 package org.eclipse.model;
 
 public class Produit {
-	private int id;
+	private int idProduit;
 	private String nom;
 	private String description;
 	private String imageUrl;
@@ -11,8 +11,8 @@ public class Produit {
 	public Produit() {
 	}
 
-	public Produit(int id, String nom, String description, String imageUrl, float prixUnitaire, int quantiteEnStock) {
-		this.id = id;
+	public Produit(int idProduit, String nom, String description, String imageUrl, float prixUnitaire, int quantiteEnStock) {
+		this.idProduit = idProduit;
 		this.nom = nom;
 		this.description = description;
 		this.imageUrl = imageUrl;
@@ -20,12 +20,12 @@ public class Produit {
 		this.quantiteEnStock = quantiteEnStock;
 	}
 
-	public int getId() {
-		return id;
+	public int getIdProduit() {
+		return idProduit;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdProduit(int idProduit) {
+		this.idProduit = idProduit;
 	}
 
 	public String getNom() {
@@ -70,7 +70,7 @@ public class Produit {
 
 	@Override
 	public String toString() {
-		return "Produit [id=" + id + ", nom=" + nom + ", description=" + description + ", imageUrl=" + imageUrl
+		return "Produit [idProduit=" + idProduit + ", nom=" + nom + ", description=" + description + ", imageUrl=" + imageUrl
 				+ ", prixUnitaire=" + prixUnitaire + ", quantiteEnStock=" + quantiteEnStock + "]";
 	}
 

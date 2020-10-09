@@ -22,7 +22,7 @@ public class ProduitService {
 	
 	public void update(Produit produit) {
 		for (Produit prod: produits) {
-			if (prod.getId() == produit.getId()) {
+			if (prod.getIdProduit() == produit.getIdProduit()) {
 				prod = produit;
 			}
 		}
@@ -36,5 +36,13 @@ public class ProduitService {
 		this.produits = produits;
 	}
 	
-	
+	public ArrayList<Produit> findByQuantiteEnStock() {
+		ArrayList<Produit> disponibles = new ArrayList<>();
+		for (Produit produit : produits) {
+			if (produit.getQuantiteEnStock() > 0) {
+				disponibles.add(produit);
+			}
+		}
+		return disponibles;
+	}
 }
